@@ -1,0 +1,130 @@
+/* Gallery Header Styling */
+.gallery-header {
+    background-color: var(--brand-blue); /* #0e06c1 */
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+    border-bottom: 6px solid var(--brand-orange); /* #f0c067 */
+}
+
+.back-link {
+    color: var(--brand-orange);
+    text-decoration: none;
+    font-weight: 800;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.gallery-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.gallery-subtitle {
+    font-weight: 700;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Photo Grid Styling */
+.gallery-container {
+    padding: 50px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.photo-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.05);
+}
+
+.photo-caption {
+    padding: 15px;
+    font-weight: 700;
+    color: #000;
+    background: #fff;
+    border-top: 3px solid var(--brand-orange);
+}
+/* Container for the image and the hidden icon */
+.thumb-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.thumb-wrapper img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* The overlay hint (magnifying glass) */
+.thumb-hint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(14, 6, 193, 0.4); /* Brand Blue with transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.thumb-hint i {
+    color: #f0c067; /* Brand Orange icon */
+    font-size: 2rem;
+    transform: scale(0.5);
+    transition: transform 0.3s ease;
+}
+
+/* Hover States */
+.thumb-wrapper:hover {
+    border-color: #f0c067;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.thumb-wrapper:hover img {
+    transform: scale(1.1); /* Slight zoom on image */
+}
+
+.thumb-wrapper:hover .thumb-hint {
+    opacity: 1;
+}
+
+.thumb-wrapper:hover .thumb-hint i {
+    transform: scale(1); /* Icon pops in */
+}

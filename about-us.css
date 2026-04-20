@@ -1,0 +1,176 @@
+:root {
+    --primary-blue: #0e06c1;
+    --accent-gold: #f0c067;
+    --light-bg: #f4f4f4;
+    --text-dark: #333;
+}
+
+body {
+    background-image: url(image/test2.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-weight: 500;
+}
+
+/* Section Containers */
+.about-section, 
+.services-section {
+    padding: 80px 0;
+    background: var(--light-bg);
+    border-radius: 20px;
+}
+
+#services {
+    background-image: url(image/test3.jfif);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Typography & Headings */
+.about-section h2 {
+    text-align: center;
+    color: var(--primary-blue);
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.about-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 5px;
+    background: var(--accent-gold);
+    margin: 15px auto;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 50px;
+}
+
+/* Mission & Vision Grid */
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-right: 6px solid var(--primary-blue);
+    border-left: 6px solid var(--accent-gold);
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(14, 6, 193, 0.1);
+}
+
+.card h3 {
+    color: var(--primary-blue);
+}
+
+.card i {
+    color: var(--accent-gold);
+    margin-right: 10px;
+}
+
+/* Values Section */
+#value-section {
+    background-image: url(image/top-header\ img.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 60px 40px;
+    border-radius: 20px;
+    color: white;
+}
+
+.values-section {
+    background: var(--primary-blue);
+    padding: 60px 40px;
+    border-radius: 20px;
+    color: var(--primary-blue);
+    margin-top: 40px;
+}
+
+.values-section h3 {
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.values-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    list-style: none;
+    gap: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.values-list li {
+    background: rgba(240, 192, 103, 0.15);
+    border: 1px solid var(--accent-gold);
+    color: var(--primary-blue);
+    text-decoration: solid;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.values-list li:hover {
+    background: var(--accent-gold);
+    color: var(--brand-blue);
+}
+
+/* Service Boxes & Tables */
+.service-box {
+    /* Use rgba: (red, green, blue, alpha) */
+    /* 244, 244, 244 is the RGB for your --light-bg (#f4f4f4) */
+    background: rgba(244, 244, 244, 0.5); 
+    
+    /* Remove the old opacity property entirely */
+    /* opacity: 0.5; <--- REMOVE THIS */
+    
+    border: 1px solid var(--primary-blue);
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.data-table th {
+    background: #eee;
+    text-align: left;
+    padding: 10px;
+}
+
+.data-table td {
+    padding: 10px;
+    border-bottom: 1px solid var(--light-bg);
+}
+
+/* Stats Counter */
+.stat-item h4 {
+    color: var(--primary-blue);
+    font-weight: 800;
+}
+
+.stat-item p {
+    color: black;
+    border-top: 2px solid var(--primary-blue);
+    display: inline-block;
+    padding-top: 5px;
+}

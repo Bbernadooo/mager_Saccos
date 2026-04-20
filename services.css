@@ -1,0 +1,135 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+/* --- Services Section Styling --- */
+.intro-text{
+    color: black;
+    text-decoration: solid;
+    font-size: larger;
+    text-align: center;
+}
+#company-name {
+    color: var(--accent-gold);
+    font-weight: 700;
+}
+.services-section {
+    padding: 80px 0;
+    color: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary-blue);
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.service-group {
+    margin-bottom: 60px;
+}
+
+.service-group h3 {
+    color: var(--primary-blue);
+    font-size: 1.8rem;
+    border-bottom: 3px solid var(--accent-gold);
+    display: inline-block;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+}
+.service-group p {
+    color: #000000;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Glassmorphism Service Boxes */
+.service-box {
+    background-image: url(image/test4.png);
+    
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--primary-blue);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(14, 6, 193, 0.15);
+    transition: transform 0.3s ease;
+    margin: 20px 0;
+}
+
+.service-box:hover {
+
+    border-color: var(--accent-gold);
+}
+
+.service-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-box li {
+    margin-bottom: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-start;
+}
+
+.service-box li::before {
+    content: "✔";
+    color: var(--accent-gold);
+    margin-right: 10px;
+    font-weight: 900;
+}
+.service-box p{
+    color: var(--light-bg);
+}
+
+/* Data Tables Styling */
+.table-container {
+    background-image: url(image/test4.png);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow-x: auto; /* For mobile responsiveness */
+}
+
+.table-container h4 {
+    color: var(--light-bg);
+    text-decoration: solid;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.data-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-weight: 700; /* Bolder data */
+}
+
+.data-table tr:nth-child(even) {
+    background-color: rgba(240, 192, 103, 0.1); /* Very light brand orange */
+}
+
+small {
+    display: block;
+    margin-top: 10px;
+    color: #666;
+    font-style: italic;
+}

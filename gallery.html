@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Gallery | Mager SACCOS LTD</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Bold Gallery Styles */
+        .gallery-header { background: #0e06c1; color: white; padding: 40px 0; text-align: center; border-bottom: 5px solid #f0c067; }
+        .gallery-header h1 { font-weight: 800; }
+        
+        .thumb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; padding: 20px; }
+        .thumb-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: 0.3s; border: 2px solid transparent; }
+        .thumb-grid img:hover { border-color: #f0c067; transform: scale(1.02); }
+
+        /* Fullscreen Swiper Overlay */
+        #gallery-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95); display: none; z-index: 1000;
+        }
+        .swiper { width: 100%; height: 80%; margin-top: 5%; }
+        .swiper-slide { display: flex; justify-content: center; align-items: center; }
+        .swiper-slide img { max-width: 90%; max-height: 100%; border: 3px solid #0e06c1; }
+        
+        .close-gallery { position: absolute; top: 20px; right: 30px; color: #f0c067; font-size: 40px; cursor: pointer; font-weight: 800; z-index: 1001; }
+        .caption-box { text-align: center; color: white; padding: 20px; font-weight: 700; }
+    </style>
+</head>
+<body>
+<header class="top-bar">
+            <p id="top-text">Official Website of Mager SACCOS LTD | Located in Addis Ababa, Ethiopia. <?xml version="1.0" ?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg fill="#000000" width="20px" height="20px" viewBox="0 0 512 512" id="_x30_1" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M418.275,146h-46.667  c-5.365-22.513-12.324-43.213-20.587-61.514c15.786,8.776,30.449,19.797,43.572,32.921C403.463,126.277,411.367,135.854,418.275,146  z M452,256c0,17.108-2.191,33.877-6.414,50h-64.034c1.601-16.172,2.448-32.887,2.448-50s-0.847-33.828-2.448-50h64.034  C449.809,222.123,452,238.892,452,256z M256,452c-5.2,0-21.048-10.221-36.844-41.813c-6.543-13.087-12.158-27.994-16.752-44.187  h107.191c-4.594,16.192-10.208,31.1-16.752,44.187C277.048,441.779,261.2,452,256,452z M190.813,306  c-1.847-16.247-2.813-33.029-2.813-50s0.966-33.753,2.813-50h130.374c1.847,16.247,2.813,33.029,2.813,50s-0.966,33.753-2.813,50  H190.813z M60,256c0-17.108,2.191-33.877,6.414-50h64.034c-1.601,16.172-2.448,32.887-2.448,50s0.847,33.828,2.448,50H66.414  C62.191,289.877,60,273.108,60,256z M256,60c5.2,0,21.048,10.221,36.844,41.813c6.543,13.087,12.158,27.994,16.752,44.187H202.404  c4.594-16.192,10.208-31.1,16.752-44.187C234.952,70.221,250.8,60,256,60z M160.979,84.486c-8.264,18.301-15.222,39-20.587,61.514  H93.725c6.909-10.146,14.812-19.723,23.682-28.593C130.531,104.283,145.193,93.262,160.979,84.486z M93.725,366h46.667  c5.365,22.513,12.324,43.213,20.587,61.514c-15.786-8.776-30.449-19.797-43.572-32.921C108.537,385.723,100.633,376.146,93.725,366z   M351.021,427.514c8.264-18.301,15.222-39,20.587-61.514h46.667c-6.909,10.146-14.812,19.723-23.682,28.593  C381.469,407.717,366.807,418.738,351.021,427.514z"/></svg></p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+    <div class="container flex-between">
+        <div class="logo-area">
+            <div class="logo-circle">
+                <img src="image\logo.png" alt="Logo"id="Logo">
+            </div>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links" id="nav-list">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="news.html">News & Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#" class="btn-member">Members Portal</a></li>
+        </ul>
+    </div>
+</nav>
+<header class="gallery-header">
+    <div class="container">
+        <h1>Annual General Meeting Highlights</h1>
+        <p>Reviewing our <strong>12.3 Million ETB</strong> milestone.</p>
+    </div>
+</header>
+<div class="container">
+    <p style="text-align: center; font-weight: 800; color: #666; margin-bottom: 10px;">
+        <i class="fas fa-hand-pointer"></i> Tap any image to view full screen
+    </p>
+    </div>
+<div class="thumb-grid">
+    <div class="thumb-wrapper" onclick="openGallery(0)">
+        <img src="photos/3.JPG" alt="Board Presentation">
+        <div class="thumb-hint"><i class="fas fa-search-plus"></i></div>
+    </div>
+
+    <div class="thumb-wrapper" onclick="openGallery(1)">
+        <img src="photos/4.JPG" alt="Member Discussion">
+        <div class="thumb-hint"><i class="fas fa-search-plus"></i></div>
+    </div>
+
+    <div class="thumb-wrapper" onclick="openGallery(2)">
+        <img src="photos/1.JPG" alt="Award Ceremony">
+        <div class="thumb-hint"><i class="fas fa-search-plus"></i></div>
+    </div>
+
+    <div class="thumb-wrapper" onclick="openGallery(3)">
+        <img src="photos/2.JPG" alt="Registration">
+        <div class="thumb-hint"><i class="fas fa-search-plus"></i></div>
+    </div>
+</div>
+
+<div id="gallery-overlay">
+    <span class="close-gallery" onclick="closeGallery()">&times;</span>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="photos/1.JPG"></div>
+            <div class="swiper-slide"><img src="photos/2.JPG"></div>
+            <div class="swiper-slide"><img src="photos/3.JPG"></div>
+            <div class="swiper-slide"><img src="photos/4.JPG"></div>
+        </div>
+        <div class="swiper-button-next" style="color: #f0c067;"></div>
+        <div class="swiper-button-prev" style="color: #f0c067;"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="caption-box" id="gallery-caption">Use your finger to swipe through our 2026 milestones[cite: 177, 244].</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    // Initialize Swiper
+    const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        pagination: { el: ".swiper-pagination", clickable: true },
+        keyboard: { enabled: true },
+    });
+
+    function openGallery(index) {
+        document.getElementById('gallery-overlay').style.display = 'block';
+        swiper.slideToLoop(index, 0);
+    }
+
+    function closeGallery() {
+        document.getElementById('gallery-overlay').style.display = 'none';
+    }
+</script>
+</body>
+</html>
