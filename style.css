@@ -19,6 +19,54 @@
     display: flex;
     width: 100%;
 }
+.language-switcher {
+    background-color:var(--primary-blue); /* Light background to stay subtle */
+    padding: 0;
+    border-bottom: 2px solid var(--primary-blue);
+}
+
+.lang-options {
+    display: flex;
+    justify-content: flex-end; /* Keeps it on the top right */
+    align-items: center;
+    gap: 15px;
+}
+
+.lang-btn {
+    text-decoration: none;
+    color: var(--light-bg);
+    font-weight: 800; /* Extra bold as requested */
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.lang-btn img {
+    border-radius: 2px;
+}
+
+.lang-btn:hover {
+    color: var(--accent-gold);
+}
+
+.lang-btn.active {
+    color: red; /* Highlight the current language */);
+    pointer-events: none; /* Disable clicking the current language */
+}
+
+.divider {
+    color: #ccc;
+    font-weight: 400;
+}
+
+/* Mobile responsive - center it on small screens */
+@media (max-width: 768px) {
+    .lang-options {
+        justify-content: center;
+    }
+}
 #Logo {
     width: 100px;
     height: 100px;

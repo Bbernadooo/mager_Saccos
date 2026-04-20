@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const langEn = document.getElementById('lang-en');
+    const langAm = document.getElementById('lang-am');
+
+    // Simple logic to highlight active language based on URL
+    if (window.location.pathname.includes('-am.html')) {
+        langAm.classList.add('active');
+        langEn.classList.remove('active');
+    } else {
+        langEn.classList.add('active');
+        langAm.classList.remove('active');
+    }
+});
+document.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('#mobile-menu');
     const navList = document.querySelector('#nav-list');
     const navLinks = document.querySelectorAll('.nav-links a');
