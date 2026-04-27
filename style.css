@@ -62,9 +62,66 @@
 }
 
 /* Mobile responsive - center it on small screens */
-@media (max-width: 768px) {
-    .lang-options {
-        justify-content: center;
+/* Mobile Responsive Styles (Phones/Tablets) */
+@media screen and (max-width: 768px) {
+    body{
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    header svg{
+        display: none;
+    }
+    .menu-toggle {
+        display: flex;
+        z-index: 1001; /* Ensure toggle stays above the menu */
+    }
+
+    .nav-links {
+        position: fixed; /* Changed from absolute to fixed for better stability */
+        top: 0;
+        right: -100%; /* Hidden off-screen */
+        flex-direction: column;
+        background: white;
+        width: 70%; /* Menu takes up 70% of the screen */
+        height: 100vh; /* Full height */
+        text-align: left;
+        padding: 80px 30px; /* Space for the logo/toggle area */
+        transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: -10px 0 20px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0; /* Slide in */
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    .nav-links li a {
+        font-size: 1.2rem;
+        display: block;
+    }
+
+    /* Animation for the Hamburger to "X" */
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .menu-toggle.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    footer{
+        background-image: url(image/footer-img.png); /* Mobile-specific footer image */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 40px 0;
     }
 }
 #Logo {
@@ -99,7 +156,9 @@
 .main-nav {
     background: white;
     padding: 15px 0;
-    position: relative;
+    position:relative;
+    top: 0;
+    z-index: 100;
 }
 
 .nav-links {
@@ -240,7 +299,41 @@
     color: var(--primary-blue);
     margin-bottom: 5px;
 }
+/* Mobile Responsive for Content Grid */
+@media screen and (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr; /* Stacks the left and right content vertically */
+        gap: 30px; /* Reduces gap for mobile screens */
+        padding: 40px 20px; /* Slightly less padding for smaller screens */
+    }
 
+    .content-left, .content-right {
+        text-align: center; /* Optional: Centers text for a cleaner mobile look */
+    }
+
+    .content-left h2, .content-right h2 {
+        font-size: 1.5rem; /* Scales down the title size */
+    }
+
+    .service-item {
+        flex-direction: column; /* Stacks the icon on top of the text */
+        align-items: center;
+        text-align: center;
+    }
+
+    .service-item i {
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between icon and heading */
+    }
+}
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 60px 0; /* Shorter hero section for mobile */
+    }
+    .hero-content h1 {
+        font-size: 1.8rem; /* Smaller heading so it doesn't wrap awkwardly */
+    }
+}
 /* Footer */
 footer {
     background-image: url(image/desktop-fotter-img.png); /* The specific royal blue from your image */
