@@ -1,48 +1,33 @@
 <?php
-// 1. Point to the PHPMailer files you just uploaded
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
+// 1. Collect and Sanitize input data
+$full_name = filter_var($_POST['full_name'], FILTER_SANITIZE_STRING);
+$phone     = filter_var($_POST['phone'], FILTER_SANITIZE_STRING);
+$subject   = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+$message   = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
 
-require 'phpmailer/Exception.php';
-require 'phpmailer/PHPMailer.php';
-require 'phpmailer/SMTP.php';
+// 2. Setup Email Details
+$to          = "magersaccos@gmail.com"; // Your receiving email
+$email_subject = "New Website Inquiry: " . $subject;
 
-// 2. Start the mailing process
-$mail = new PHPMailer(true);
+// 3. Create the Email Content (HTML format)
+$email_body = "
+    <h2>New Form Submission from Mager SACCOS Website</h2>
+    <p><strong>Name:</strong> {$full_name}</p>
+    <p><strong>Phone:</strong> {$phone}</p>
+    <p><strong>Subject:</strong> {$subject}</p>
+    <p><strong>Message:</strong><br>{$message}</p>
+";
 
-try {
-    // --- SERVER SETTINGS (The "ID Card") ---
-    $mail->isSMTP();                                      
-    $mail->Host       = 'mail.magerwebsite.com';      // Your Yegara Mail Server
-    $mail->SMTPAuth   = true;                             
-    $mail->Username   = 'info@magerwebsite.com';      // Your official email
-    $mail->Password   = 'YourEmailPasswordHere';      // Your email password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;      // High security
-    $mail->Port       = 465;                              // Standard secure port
+// 4. Set Headers (Important for deliverability)
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+$headers .= "From: notifications@magerwebsite.com" . "\r\n"; // Use an email from your domain
 
-    // --- WHO IS SENDING AND RECEIVING ---
-    $mail->setFrom('info@magerwebsite.com', 'Mager Website Form');
-    $mail->addAddress('magersaccos@gmail.com');        // Where YOU receive the mail
-
-    // --- THE EMAIL CONTENT ---
-    $mail->isHTML(true);                                  
-    $mail->Subject = 'New Inquiry: ' . $_POST['subject'];
-    
-    // Building a nice looking body
-    $mail->Body    = "
-        <h3>New Contact Request</h3>
-        <p><strong>Name:</strong> {$_POST['full_name']}</p>
-        <p><strong>Phone:</strong> {$_POST['phone']}</p>
-        <p><strong>Subject:</strong> {$_POST['subject']}</p>
-        <p><strong>Message:</strong><br>{$_POST['message']}</p>
-    ";
-
-    $mail->send();
-    // Redirect back to your contact page with a success message
-    echo "<script>alert('Thank you! Your message has been sent.'); window.location.href='contact.html';</script>";
-
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+// 5. Send the mail
+if(mail($to, $email_subject, $email_body, $headers)) {
+    // Redirect back to a thank you page or show success
+    echo "<script>alert('Message sent successfully!'); window.location.href='contact.html';</script>";
+} else {
+    echo "Error: Message could not be sent.";
 }
 ?>
