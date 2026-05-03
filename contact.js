@@ -7,12 +7,47 @@ document.getElementById('magerContactForm').addEventListener('submit', function(
     btn.disabled = true;
 
     setTimeout(() => {
-        alert("Thank you! Your message has been sent to Mager SACCOS LTD. We will contact you shortly.");
+        showToast("Thank you! Your message has been sent to Mager SACCOS LTD. We will contact you shortly.");
         btn.innerText = "Send Message";
         btn.disabled = false;
         this.reset();
     }, 1500);
 });
+
+function showToast(message, duration = 3500) {
+    const toast = document.createElement('div');
+    toast.textContent = message;
+    Object.assign(toast.style, {
+        position: 'fixed',
+        bottom: '24px',
+        right: '24px',
+        maxWidth: '320px',
+        backgroundColor: 'rgba(0, 0, 0, 0.9)',
+        color: '#fff',
+        padding: '14px 18px',
+        borderRadius: '12px',
+        boxShadow: '0 10px 24px rgba(0, 0, 0, 0.2)',
+        fontSize: '14px',
+        lineHeight: '1.4',
+        zIndex: '9999',
+        opacity: '0',
+        transform: 'translateY(16px)',
+        transition: 'opacity 0.25s ease, transform 0.25s ease'
+    });
+
+    document.body.appendChild(toast);
+    requestAnimationFrame(() => {
+        toast.style.opacity = '1';
+        toast.style.transform = 'translateY(0)';
+    });
+
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(16px)';
+        toast.addEventListener('transitionend', () => toast.remove(), { once: true });
+    }, duration);
+}
+
 // 1. Define your collections
 const collections = {
     'meeting': [
