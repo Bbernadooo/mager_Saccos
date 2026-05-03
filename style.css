@@ -52,7 +52,7 @@
 }
 
 .lang-btn.active {
-    color: red; /* Highlight the current language */);
+    color: red; /* Highlight the current language */;
     pointer-events: none; /* Disable clicking the current language */
 }
 
