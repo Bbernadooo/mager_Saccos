@@ -2,12 +2,12 @@
 // IMPORTANT: Ensure your filenames (e.g., 3.jpg) match the actual file case exactly.
 const collections = {
     'meeting': [
-        { src: '/photos/3.jpg', cap: 'Annual General Meeting - Board Presentation' },
-        { src: '/photos/5.jpg', cap: 'Member Discussion Session' },
-        { src: '/photos/7.jpg', cap: 'Member Discussion Session' },
+        { src: 'photos/3.jpg', cap: 'Annual General Meeting - Board Presentation' },
+        { src: 'photos/5.jpg', cap: 'Member Discussion Session' },
+        { src: 'photos/7.jpg', cap: 'Member Discussion Session' },
         { src: '/photos/11.jpg', cap: 'Member Discussion Session' },
         { src: '/photos/15.jpg', cap: 'Member Discussion Session' },
-        { src: '/photos/2.jpg', cap: 'Member Discussion Session' },
+        { src: 'photos/2.jpg', cap: 'Member Discussion Session' },
         { src: '/photos/20.jpg', cap: 'Member Discussion Session' },
         { src: '/photos/9.jpg', cap: 'Member Discussion Session' }
     ],
