@@ -4,7 +4,7 @@ const collections = {
         { src: 'photos/3.JPG', cap: 'Annual General Meeting - Board Presentation' },
         { src: 'photos/5.JPG', cap: 'Member Discussion Session' },
         { src: 'photos/7.JPG', cap: 'Member Discussion Session' },
-        { src: 'photos/11.JPG', cap: 'Member Discussion Session' },
+        { src: '/photos/11.JPG', cap: 'Member Discussion Session' },
         { src: 'photos/15.JPG', cap: 'Member Discussion Session' },
         { src: 'photos/2.JPG', cap: 'Member Discussion Session' },
         { src: 'photos/20.JPG', cap: 'Member Discussion Session' },
