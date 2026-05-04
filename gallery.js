@@ -8,7 +8,7 @@ const collections = {
         { src: 'photos/15.jpg', cap: 'Member Discussion Session' },
         { src: 'photos/2.JPG', cap: 'Member Discussion Session' },
         { src: 'photos/20.jpg', cap: 'Member Discussion Session' },
-        { src: 'photos/9.jPG', cap: 'Member Discussion Session' }
+        { src: 'photos/9.jpg', cap: 'Member Discussion Session' }
         
     ],
     'anniversary': [
