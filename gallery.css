@@ -182,10 +182,21 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .gallery-header h1 { font-size: 1.8rem; }
-    .thumb-grid { grid-template-columns: 1fr; }
-    .close-gallery { top: 15px; right: 20px; font-size: 40px; }
-    .swiper-slide img { border-width: 2px; }
+    html,body{
+        overflow-x: hidden;
+    }
+    .gallery-header h1 {
+         font-size: 1.8rem; 
+        }
+    .thumb-grid { 
+        grid-template-columns: 1fr;
+     }
+    .close-gallery { 
+        top: 15px; right: 20px; font-size: 40px; 
+    }
+    .swiper-slide img { 
+        border-width: 2px; 
+    }
 }
 .video-section-fixed {
     padding: 40px 0;
@@ -204,6 +215,9 @@
 /* Mobile Responsive: If the screen is smaller than 560px, 
    make the video fit the screen width */
 @media (max-width: 600px) {
+    html,body{
+        overflow-x: hidden;
+    }
     .video-fixed-wrapper {
         display: block;
         margin: 0 10px;

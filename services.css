@@ -133,3 +133,7 @@ small {
     color: #666;
     font-style: italic;
 }
+@media (max-width: 768px) {
+    .service-box {
+        padding: 20px;
+    }

@@ -204,6 +204,10 @@
 
 /* Mobile Responsive Styles (Phones/Tablets) */
 @media screen and (max-width: 768px) {
+        body{
+            max-width: 100%;
+            overflow-x: hidden;
+        }
     .menu-toggle {
         display: flex;
         z-index: 100;
@@ -301,6 +305,9 @@
 }
 /* Mobile Responsive for Content Grid */
 @media screen and (max-width: 768px) {
+    html,body{
+        overflow-x: hidden;
+    }
     .content-grid {
         grid-template-columns: 1fr; /* Stacks the left and right content vertically */
         gap: 30px; /* Reduces gap for mobile screens */

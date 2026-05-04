@@ -8,6 +8,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
+    overflow-x: hidden;
 }
 
 /* Section Containers */
@@ -233,6 +234,9 @@ body {
 
 /* Responsive adjustment */
 @media (max-width: 768px) {
+    html,body{
+        overflow-x: hidden;
+    }
     .governance-card {
         flex-direction: column;
         text-align: center;

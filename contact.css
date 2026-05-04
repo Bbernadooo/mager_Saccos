@@ -90,5 +90,8 @@
 }
 
 @media (max-width: 768px) {
+    html,body{
+        overflow-x: hidden;
+    }
     .contact-wrapper { grid-template-columns: 1fr; }
 }
