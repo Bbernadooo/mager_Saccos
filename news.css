@@ -264,5 +264,8 @@ body {
     html,body{
         overflow-x: hidden;
     }
+    .event-grid, .image-grid {
+        grid-template-columns: 1fr; /* Stacks cards vertically on mobile */
+    }
     
 }
