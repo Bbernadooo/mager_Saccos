@@ -1,37 +1,37 @@
-// 1. Define your collections
+// 1. Define your collections with absolute paths
+// IMPORTANT: Ensure your filenames (e.g., 3.jpg) match the actual file case exactly.
 const collections = {
     'meeting': [
-        { src: 'photos/3.JPG', cap: 'Annual General Meeting - Board Presentation' },
-        { src: 'photos/5.JPG', cap: 'Member Discussion Session' },
-        { src: 'photos/7.JPG', cap: 'Member Discussion Session' },
-        { src: 'photos/11.JPG', cap: 'Member Discussion Session' },
-        { src: 'photos/15.JPG', cap: 'Member Discussion Session' },
-        { src: 'photos/2.JPG', cap: 'Member Discussion Session' },
-        { src: 'photos/20.JPG', cap: 'Member Discussion Session' },
-        { src: 'photos/9.JPG', cap: 'Member Discussion Session' }
-        
+        { src: '/photos/3.jpg', cap: 'Annual General Meeting - Board Presentation' },
+        { src: '/photos/5.jpg', cap: 'Member Discussion Session' },
+        { src: '/photos/7.jpg', cap: 'Member Discussion Session' },
+        { src: '/photos/11.jpg', cap: 'Member Discussion Session' },
+        { src: '/photos/15.jpg', cap: 'Member Discussion Session' },
+        { src: '/photos/2.jpg', cap: 'Member Discussion Session' },
+        { src: '/photos/20.jpg', cap: 'Member Discussion Session' },
+        { src: '/photos/9.jpg', cap: 'Member Discussion Session' }
     ],
     'anniversary': [
-        { src: 'photos/1.JPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'photos/4.JPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'photos/12.JPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'photos/14.JPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'photos/16.JPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'photos/17.JPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'photos/19.JPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'photos/18.JPG', cap: 'First Year Anniversary Celebration' }
+        { src: '/photos/1.jpg', cap: 'First Year Anniversary Celebration' },
+        { src: '/photos/4.jpg', cap: 'First Year Anniversary Celebration' },
+        { src: '/photos/12.jpg', cap: 'First Year Anniversary Celebration' },
+        { src: '/photos/14.jpg', cap: 'First Year Anniversary Celebration' },
+        { src: '/photos/16.jpg', cap: 'First Year Anniversary Celebration' },
+        { src: '/photos/17.jpg', cap: 'First Year Anniversary Celebration' },
+        { src: '/photos/19.jpg', cap: 'First Year Anniversary Celebration' },
+        { src: '/photos/18.jpg', cap: 'First Year Anniversary Celebration' }
     ],
     'outreach': [
-        { src: 'photos/3.JPG', cap: 'Community Outreach ' },
-        { src: 'photos/2.JPG', cap: 'Community Outreach ' },
-        { src: 'photos/21.JPG', cap: 'Community Outreach ' },
-        { src: 'photos/22.JPG', cap: 'Community Outreach ' },
-        { src: 'photos/23.JPG', cap: 'Community Outreach ' },
-        { src: 'photos/25.JPG', cap: 'Community Outreach ' }
+        { src: '/photos/3.jpg', cap: 'Community Outreach ' },
+        { src: '/photos/2.jpg', cap: 'Community Outreach ' },
+        { src: '/photos/21.jpg', cap: 'Community Outreach ' },
+        { src: '/photos/22.jpg', cap: 'Community Outreach ' },
+        { src: '/photos/23.jpg', cap: 'Community Outreach ' },
+        { src: '/photos/25.jpg', cap: 'Community Outreach ' }
     ]
 };
 
-// 2. Initialize Swiper (Only ONCE)
+// 2. Initialize Swiper
 const swiper = new Swiper(".mySwiper", {
     loop: true,
     slidesPerView: 1,
@@ -42,15 +42,13 @@ const swiper = new Swiper(".mySwiper", {
     keyboard: { enabled: true },
 });
 
-// Variable to keep track of the current active category for captions
 let currentCategory = '';
 
-// 3. The logic to switch collections and open gallery
+// 3. Open gallery logic
 function openGallery(category) {
     const overlay = document.getElementById('gallery-overlay');
     const caption = document.getElementById('gallery-caption');
     
-    // Safety check: make sure category exists
     if (!collections[category]) return;
     
     currentCategory = category;
@@ -58,19 +56,17 @@ function openGallery(category) {
     // Clear existing slides
     swiper.removeAllSlides();
     
-    // Add new slides from the selected collection
+    // Add new slides
     collections[category].forEach(item => {
         swiper.appendSlide(`<div class="swiper-slide"><img src="${item.src}" alt="${item.cap}" style="width:100%;height:auto;max-width:100%;object-fit:contain;"></div>`);
     });
 
-    // Update the first caption immediately
+    // Update first caption
     caption.innerText = collections[category][0].cap;
     
-    // Show overlay and disable body scroll
     overlay.style.display = 'block';
     document.body.style.overflow = 'hidden';
     
-    // Refresh Swiper and jump to start
     swiper.update();
     swiper.slideToLoop(0, 0);
 }
@@ -89,5 +85,5 @@ swiper.on('slideChange', function () {
 // 5. Close Gallery logic
 function closeGallery() {
     document.getElementById('gallery-overlay').style.display = 'none';
-    document.body.style.overflow = 'auto'; // Re-enable scrolling
+    document.body.style.overflow = 'auto';
 }
