@@ -34,6 +34,9 @@ const collections = {
 // 2. Initialize Swiper (Only ONCE)
 const swiper = new Swiper(".mySwiper", {
     loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    autoHeight: true,
     navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
     pagination: { el: ".swiper-pagination", clickable: true },
     keyboard: { enabled: true },
@@ -57,7 +60,7 @@ function openGallery(category) {
     
     // Add new slides from the selected collection
     collections[category].forEach(item => {
-        swiper.appendSlide(`<div class="swiper-slide"><img src="${item.src}" alt="${item.cap}"></div>`);
+        swiper.appendSlide(`<div class="swiper-slide"><img src="${item.src}" alt="${item.cap}" style="width:100%;height:auto;max-width:100%;object-fit:contain;"></div>`);
     });
 
     // Update the first caption immediately
