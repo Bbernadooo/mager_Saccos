@@ -5,29 +5,29 @@ const collections = {
         { src: 'photos/5.JPG', cap: 'Member Discussion Session' },
         { src: 'photos/7.JPG', cap: 'Member Discussion Session' },
         { src: 'photos/11.jpg', cap: 'Member Discussion Session' },
-        { src: 'photos/15.jPG', cap: 'Member Discussion Session' },
+        { src: 'photos/15.jpg', cap: 'Member Discussion Session' },
         { src: 'photos/2.JPG', cap: 'Member Discussion Session' },
-        { src: 'photos/20.jPG', cap: 'Member Discussion Session' },
+        { src: 'photos/20.jpg', cap: 'Member Discussion Session' },
         { src: 'photos/9.jPG', cap: 'Member Discussion Session' }
         
     ],
     'anniversary': [
         { src: 'photos/1.JPG', cap: 'First Year Anniversary Celebration' },
         { src: 'photos/4.JPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'photos/12.jPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'photos/14.jPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'photos/16.jPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'photos/17.jPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'photos/19.jPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'photos/18.jPG', cap: 'First Year Anniversary Celebration' }
+        { src: 'photos/12.jpg', cap: 'First Year Anniversary Celebration' },
+        { src: 'photos/14.jpg', cap: 'First Year Anniversary Celebration' },
+        { src: 'photos/16.jpg', cap: 'First Year Anniversary Celebration' },
+        { src: 'photos/17.jpg', cap: 'First Year Anniversary Celebration' },
+        { src: 'photos/19.jpg', cap: 'First Year Anniversary Celebration' },
+        { src: 'photos/18.jpg', cap: 'First Year Anniversary Celebration' }
     ],
     'outreach': [
         { src: 'photos/3.JPG', cap: 'Community Outreach ' },
         { src: 'photos/2.JPG', cap: 'Community Outreach ' },
-        { src: 'photos/21.jPG', cap: 'Community Outreach ' },
-        { src: 'photos/22.jPG', cap: 'Community Outreach ' },
-        { src: 'photos/23.jPG', cap: 'Community Outreach ' },
-        { src: 'photos/25.jPG', cap: 'Community Outreach ' }
+        { src: 'photos/21.jpg', cap: 'Community Outreach ' },
+        { src: 'photos/22.jpg', cap: 'Community Outreach ' },
+        { src: 'photos/23.jpg', cap: 'Community Outreach ' },
+        { src: 'photos/25.jpg', cap: 'Community Outreach ' }
     ]
 };
 
