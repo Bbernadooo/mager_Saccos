@@ -1,33 +1,33 @@
 // 1. Define your collections
 const collections = {
     'meeting': [
-        { src: 'public/photos/3.JPG', cap: 'Annual General Meeting - Board Presentation' },
-        { src: 'public/photos/5.JPG', cap: 'Member Discussion Session' },
-        { src: 'public/photos/7.JPG', cap: 'Member Discussion Session' },
-        { src: 'public/photos/11.JPG', cap: 'Member Discussion Session' },
-        { src: 'public/photos/15.JPG', cap: 'Member Discussion Session' },
-        { src: 'public/photos/2.JPG', cap: 'Member Discussion Session' },
-        { src: 'public/photos/20.JPG', cap: 'Member Discussion Session' },
-        { src: 'public/photos/9.JPG', cap: 'Member Discussion Session' }
+        { src: 'photos/3.JPG', cap: 'Annual General Meeting - Board Presentation' },
+        { src: 'photos/5.JPG', cap: 'Member Discussion Session' },
+        { src: 'photos/7.JPG', cap: 'Member Discussion Session' },
+        { src: 'photos/11.JPG', cap: 'Member Discussion Session' },
+        { src: 'photos/15.JPG', cap: 'Member Discussion Session' },
+        { src: 'photos/2.JPG', cap: 'Member Discussion Session' },
+        { src: 'photos/20.JPG', cap: 'Member Discussion Session' },
+        { src: 'photos/9.JPG', cap: 'Member Discussion Session' }
         
     ],
     'anniversary': [
-        { src: 'public/photos/1.JPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'public/photos/4.JPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'public/photos/12.JPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'public/photos/14.JPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'public/photos/16.JPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'public/photos/17.JPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'public/photos/19.JPG', cap: 'First Year Anniversary Celebration' },
-        { src: 'public/photos/18.JPG', cap: 'First Year Anniversary Celebration' }
+        { src: 'photos/1.JPG', cap: 'First Year Anniversary Celebration' },
+        { src: 'photos/4.JPG', cap: 'First Year Anniversary Celebration' },
+        { src: 'photos/12.JPG', cap: 'First Year Anniversary Celebration' },
+        { src: 'photos/14.JPG', cap: 'First Year Anniversary Celebration' },
+        { src: 'photos/16.JPG', cap: 'First Year Anniversary Celebration' },
+        { src: 'photos/17.JPG', cap: 'First Year Anniversary Celebration' },
+        { src: 'photos/19.JPG', cap: 'First Year Anniversary Celebration' },
+        { src: 'photos/18.JPG', cap: 'First Year Anniversary Celebration' }
     ],
     'outreach': [
-        { src: 'public/photos/3.JPG', cap: 'Community Outreach ' },
-        { src: 'public/photos/2.JPG', cap: 'Community Outreach ' },
-        { src: 'public/photos/21.JPG', cap: 'Community Outreach ' },
-        { src: 'public/photos/22.JPG', cap: 'Community Outreach ' },
-        { src: 'public/photos/23.JPG', cap: 'Community Outreach ' },
-        { src: 'public/photos/25.JPG', cap: 'Community Outreach ' }
+        { src: 'photos/3.JPG', cap: 'Community Outreach ' },
+        { src: 'photos/2.JPG', cap: 'Community Outreach ' },
+        { src: 'photos/21.JPG', cap: 'Community Outreach ' },
+        { src: 'photos/22.JPG', cap: 'Community Outreach ' },
+        { src: 'photos/23.JPG', cap: 'Community Outreach ' },
+        { src: 'photos/25.JPG', cap: 'Community Outreach ' }
     ]
 };
 
