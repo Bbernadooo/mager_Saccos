@@ -1,3 +1,16 @@
+window.addEventListener("load", function() {
+    const loader = document.getElementById("loader-wrapper");
+    
+    // Ensure the user sees the professional transition
+    setTimeout(() => {
+        loader.classList.add("loader-hidden");
+        
+        // Remove from DOM after transition to save resources
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 800); 
+    }, 1500); 
+});
 document.addEventListener('DOMContentLoaded', () => {
     const langEn = document.getElementById('lang-en');
     const langAm = document.getElementById('lang-am');
