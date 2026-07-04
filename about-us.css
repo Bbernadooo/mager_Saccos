@@ -20,7 +20,7 @@ body {
 }
 
 #services {
-    background-image: url(image/test4.png);
+    background-image: url(image/test4.webp);
     background-size: cover;
     background-position: center;
 }
@@ -79,7 +79,7 @@ body {
 
 /* Values Section */
 #value-section {
-    background-image: url(image/test4.png);
+    background-image: url(image/test4.webp);
     background-size: cover;
     background-position: center;
     padding: 60px 40px;

@@ -48,7 +48,7 @@ body {
 
 /* Glassmorphism Service Boxes */
 .service-box {
-    background-image: url(image/test4.png);
+    background-image: url(image/test4.webp);
     
     backdrop-filter: blur(10px);
     border: 1px solid var(--primary-blue);
@@ -88,7 +88,7 @@ body {
 
 /* Data Tables Styling */
 .table-container {
-    background-image: url(image/test4.png);
+    background-image: url(image/test4.webp);
     backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 12px;

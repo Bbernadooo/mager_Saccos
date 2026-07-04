@@ -191,7 +191,7 @@
         transform: rotate(45deg) translate(-5px, -6px);
     }
     footer{
-        background-image: url(image/footer-img.png); /* Mobile-specific footer image */
+        background-image: url(image/footer-img.webp); /* Mobile-specific footer image */
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -312,7 +312,7 @@
 
 .hero {
     background:
-                url("image/top-header\ img.jpg");
+                url("image/top-header\ img.webp");
     background-size: cover;
     background-position: center;
     padding: 100px 0;
@@ -417,7 +417,7 @@
 }
 /* Footer */
 footer {
-    background-image: url(image/desktop-fotter-img.png); /* The specific royal blue from your image */
+    background-image: url(image/desktop-fotter-img.webp); /* The specific royal blue from your image */
     background-size: cover; /* Ensures the image covers the entire footer area */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat;
