@@ -409,12 +409,7 @@
     /* Switches to full vertical card tint for mobile readability */
     .hero::before {
         width: 100%;
-        background: linear-gradient(
-            to bottom,
-            rgba(210, 225, 245, 0.95) 0%,
-            rgba(210, 225, 245, 0.88) 60%,
-            rgba(210, 225, 245, 0.75) 100%
-        );
+        
     }
     
     .hero-content {
