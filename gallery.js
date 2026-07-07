@@ -8,7 +8,15 @@ const collections = {
         { src: 'photos/15.jpg', cap: 'Member Discussion Session' },
         { src: 'photos/2.JPG', cap: 'Member Discussion Session' },
         { src: 'photos/20.jpg', cap: 'Member Discussion Session' },
-        { src: 'photos/9.jpg', cap: 'Member Discussion Session' }
+        { src: 'photos/9.jpg', cap: 'Member Discussion Session' },
+        {src:'photos/s1.jpg', cap: 'Second Year Anniversary Celebration'},
+        {src:'photos/s2.jpg', cap: 'Second Year Anniversary Celebration'},
+        {src:'photos/s3.jpg', cap: 'Second Year Anniversary Celebration'},
+        {src:'photos/s5.jpg', cap: 'Second Year Anniversary Celebration'},
+        {src:'photos/s6.jpg', cap: 'Second Year Anniversary Celebration'},
+        {src:'photos/s7.jpg', cap: 'Second Year Anniversary Celebration'},
+        {src:'photos/s8.jpg', cap: 'Second Year Anniversary Celebration'},
+
         
     ],
     'anniversary': [
@@ -20,6 +28,7 @@ const collections = {
         { src: 'photos/17.jpg', cap: 'First Year Anniversary Celebration' },
         { src: 'photos/19.jpg', cap: 'First Year Anniversary Celebration' },
         { src: 'photos/18.jpg', cap: 'First Year Anniversary Celebration' }
+        
     ],
     'outreach': [
         { src: 'photos/3.JPG', cap: 'Community Outreach ' },
@@ -27,7 +36,11 @@ const collections = {
         { src: 'photos/21.jpg', cap: 'Community Outreach ' },
         { src: 'photos/22.jpg', cap: 'Community Outreach ' },
         { src: 'photos/23.jpg', cap: 'Community Outreach ' },
-        { src: 'photos/25.jpg', cap: 'Community Outreach ' }
+        { src: 'photos/25.jpg', cap: 'Community Outreach ' },
+        {src:'photos/s13.jpg', cap: 'Community Outreach '},
+        {src:'photos/s14.jpg', cap: 'Community Outreach '},
+        {src:'photos/s15.jpg', cap: 'Community Outreach '},
+        {src:'photos/s16.jpg', cap: 'Community Outreach '}
     ]
 };
 
